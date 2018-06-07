@@ -23,7 +23,7 @@ class ResultViewController:UIViewController{
         for questionData in QuestionDataManager.sharedInstance.questionDataArray{
             //正解数を計算する
             if questionData.isCorrect(){
-                correctCount+=1            //正解数を増やす
+                correctCount += 1            //正解数を増やす
             }
         }
         let correctPercent :Float = (Float(correctCount)/Float(questionCount))*100 //正解率の計算

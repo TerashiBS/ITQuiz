@@ -6,7 +6,6 @@
 //  Copyright © 2018年 Yudai Terashita. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import AudioToolbox
 
@@ -42,22 +41,22 @@ class QuestionViewController:UIViewController{
     }
     
     //選択肢1をタップ
-    @IBAction func tapAnswer1Button(sender:AnyObject){
+    @IBAction func tapAnswer1Button(_ sender:Any){
         questionData.userChoiceAnswerNumber = 1  //選択した答えの番号を保存する
         goNextQuestionWithAnimation()            //次の問題に進む
     }
     //選択肢2をタップ
-    @IBAction func tapAnswer2Button(sender:AnyObject){
+    @IBAction func tapAnswer2Button(_ sender:Any){
         questionData.userChoiceAnswerNumber = 2  //選択した答えの番号を保存する
         goNextQuestionWithAnimation()            //次の問題に進む
     }
     //選択肢3をタップ
-    @IBAction func tapAnswer3Button(sender:AnyObject){
+    @IBAction func tapAnswer3Button(_ sender:Any){
         questionData.userChoiceAnswerNumber = 3  //選択した答えの番号を保存する
         goNextQuestionWithAnimation()            //次の問題に進む
     }
     //選択肢4をタップ
-    @IBAction func tapAnswer4Button(sender:AnyObject){
+    @IBAction func tapAnswer4Button(_ sender:Any){
         questionData.userChoiceAnswerNumber = 4  //選択した答えの番号を保存する
         goNextQuestionWithAnimation()            //次の問題に進む
     }
@@ -77,45 +76,47 @@ class QuestionViewController:UIViewController{
     //次の問題に正解のアニメーション付きで遷移する
     func goNextQuestionWithCorrectAnimation(){
         //正解を伝える音を鳴らす
-        AudioServicesPlayAlertSoundWithCompletion(1025,nil)
+        AudioServicesPlayAlertSound(1025)
         //アニメーションを行う
-        UIView.animate(withDuration: 2.0, animations: { () -> Void in
+        UIView.animate(withDuration: 2.0, animations: {
             //アルファ値を1.0に変化される(初期値はstoryboardで0.0に設定済み)
             self.correctImageView.alpha = 1.0
-            }){(Bool) -> Void in self.goNextQuestion()    //アニメーション完了後に次の問題に進む
+            }){(Bool) in self.goNextQuestion()    //アニメーション完了後に次の問題に進む
         }
     }
 
     //次の問題に不正解のアニメーション付きで遷移する
     func goNextQuestionWithInCorrectAnimation(){
         //不正解を伝える音を鳴らす
-        AudioServicesPlayAlertSoundWithCompletion(1006,nil)
+        AudioServicesPlayAlertSound(1006)
         //アニメーションを行う
-        UIView.animate(withDuration: 2.0, animations: { () -> Void in
+        UIView.animate(withDuration: 2.0, animations: {
             //アルファ値を1.0に変化される(初期値はstoryboardで0.0に設定済み)
             self.incorrectImageView.alpha = 1.0
-            }){(Bool) -> Void in self.goNextQuestion()    //アニメーション完了後に次の問題に進む
+            }){(Bool) in self.goNextQuestion()    //アニメーション完了後に次の問題に進む
         }
     }
 
     //次の問題へ遷移する
     func goNextQuestion(){
         //問題文がある場合は次の問題へ遷移する
-        if let nextQuestion = QuestionDataManager.sharedInstance.nextQuestion(){
-            //storyboardのIdentifierに設定した値(question)を指定してViewControllerを生成する
-            if let nextQuestionViewController = storyboard?.instantiateViewController(withIdentifier: "question")as? QuestionViewController{
-                nextQuestionViewController.questionData = nextQuestion
-                //storyboardのsegueを利用しない明示的な画面遷移処理
-                self.present(nextQuestionViewController,animated:true,completion:nil)
-            }
-            
-        }else{
+        guard let nextQuestion = QuestionDataManager.sharedInstance.nextQuestion() else{
             //問題文がなければ結果画面へ遷移する
             //storyboradのIdentifierに設定した値(result)を指定してViewControllerを生成する
             if let resultViewController = storyboard?.instantiateViewController(withIdentifier: "result") as? ResultViewController{
                 //storyboardのsegueを利用しない明示的な画面遷移処理
-                self.present(resultViewController,animated:true,completion:nil)
+                present(resultViewController,animated:true,completion:nil)
             }
+            return
+        }
+        // 問題文がある場合は次の問題へ遷移する
+        // StoryboardのIdentifierに設定した値(question)を設定してViewControllerを生成する
+        if let nextQuestionViewController = storyboard?.instantiateViewController(withIdentifier: "question") as? QuestionViewController{
+            nextQuestionViewController.questionData = nextQuestion
+            // StoryboardのSegueを利用しない明示的な画面遷移処理
+            present(nextQuestionViewController, animated: true,completion: nil)
+        
+        
         }
     }
 }

@@ -26,18 +26,20 @@ class StartViewController:UIViewController{
         //問題文の読み込み
         QuestionDataManager.sharedInstance.loadQuestion()
         
-        //遷移先画面取り出し
-        if let nextViewController = segue.destination as? QuestionViewController{
+        //遷移先画面呼び出し
+        guard let nextViewController = segue.destination as? QuestionViewController else{
+            return
+        }
             //問題文の取り出し
-            if let questionData = QuestionDataManager.sharedInstance.nextQuestion(){
+            guard let questionData = QuestionDataManager.sharedInstance.nextQuestion() else{
+                return
+        }
                 //問題文のセット
                 nextViewController.questionData = questionData
             }
-        }
-    }
     
     //タイトルに戻ってくるときに呼び出される処理
-    @IBAction func goToTittle(segue:UIStoryboardSegue){
+    @IBAction func goToTittle(_ segue:UIStoryboardSegue){
         
     }
 }

@@ -82,7 +82,7 @@ class QuestionDataManager{
         questionDataArray.removeAll()
         //現在の問題のインデクッスを初期化
         nowQuestionIndex = 0
-        
+
         //CSVファイルパスを取得
         guard let csvFilePath = Bundle.main.path(forResource:"question",ofType:"csv")else {
             //CSVファイルなし
