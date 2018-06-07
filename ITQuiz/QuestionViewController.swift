@@ -13,15 +13,24 @@ class QuestionViewController:UIViewController{
     
     var questionData:QuestionData!
     
-    @IBOutlet weak var questionNoLabel:UILabel!         //問題番号ラベル
-    @IBOutlet weak var questionTextView:UITextView!     //問題文テキストビュー
-    @IBOutlet weak var answer1Button:UIButton!          //選択肢1ボタン
-    @IBOutlet weak var answer2Button:UIButton!          //選択肢2ボタン
-    @IBOutlet weak var answer3Button:UIButton!          //選択肢3ボタン
-    @IBOutlet weak var answer4Button:UIButton!          //選択肢4ボタン
+    @IBOutlet weak var questionNoLabel: UILabel!
+        //問題番号ラベル
+    @IBOutlet weak var questionTextView: UITextView!
+        //問題文テキストビュー
+
+    @IBOutlet weak var answer1Button: UIButton!
+        //選択肢1ボタン
+    @IBOutlet weak var answer2Button: UIButton!
+        //選択肢2ボタン
+    @IBOutlet weak var answer3Button: UIButton!
+        //選択肢3ボタン
+    @IBOutlet weak var answer4Button: UIButton!
+        //選択肢4ボタン
     
-    @IBOutlet weak var correctImageView:UIImageView!   //正解のイメージビュー
-    @IBOutlet weak var incorrectImageView:UIImageView!   //不正解のイメージビュー
+    @IBOutlet weak var correctImageView: UIImageView!
+        //正解のイメージビュー
+    @IBOutlet weak var incorrectImageView: UIImageView!
+        //不正解のイメージビュー
     
     
     override func viewDidLoad() {
