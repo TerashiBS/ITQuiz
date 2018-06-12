@@ -30,13 +30,13 @@ class StartViewController:UIViewController{
         guard let nextViewController = segue.destination as? QuestionViewController else{
             return
         }
-            //問題文の取り出し
-            guard let questionData = QuestionDataManager.sharedInstance.nextQuestion() else{
-                return
+        //問題文の取り出し
+        guard let questionData = QuestionDataManager.sharedInstance.nextQuestion() else{
+            return
         }
-                //問題文のセット
-                nextViewController.questionData = questionData
-            }
+        //問題文のセット
+        nextViewController.questionData = questionData
+    }
     
     //タイトルに戻ってくるときに呼び出される処理
     @IBAction func goToTittle(_ segue:UIStoryboardSegue){

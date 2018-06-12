@@ -11,7 +11,8 @@ import AudioToolbox
 
 class QuestionViewController:UIViewController{
     
-    var questionData:QuestionData!
+   
+    var questionData: QuestionData!
     
     @IBOutlet weak var questionNoLabel: UILabel!
         //問題番号ラベル
@@ -36,6 +37,14 @@ class QuestionViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let test = QuestionDataManager.sharedInstance
+        
+        test.loadQuestion()
+        
+        //問題文の取り出し
+        guard let questionData = test.nextQuestion() else{
+            return
+        }
         //初期データ設定処理。前画面で設定済みのquestionDataから値を取り出す
         questionNoLabel.text = "Q.\(questionData.questionNo)"
         questionTextView.text = questionData.question

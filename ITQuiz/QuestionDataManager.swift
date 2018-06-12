@@ -48,7 +48,7 @@ class QuestionData{
     //ユーザーが選択した答えが正解かどうか判定する
     func isCorrect() -> Bool{
         //答えが一致しているかどうか判定をする
-        if correctAnswerNumber == userChoiceAnswerNumber{
+       if correctAnswerNumber == userChoiceAnswerNumber{
             //正解
             return true
         }
