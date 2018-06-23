@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ITQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITQuiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL4-xD-jMk">
+                                <rect key="frame" x="150" y="220" width="137" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBw-zz-tew">
+                                <rect key="frame" x="180" y="400" width="74" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xl5-Dv-hrB" kind="presentation" id="yo3-En-Acg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rL4-xD-jMk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="EeF-P3-pwL"/>
+                            <constraint firstItem="hBw-zz-tew" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="180" id="JNP-cs-kDa"/>
+                            <constraint firstItem="hBw-zz-tew" firstAttribute="top" secondItem="rL4-xD-jMk" secondAttribute="bottom" constant="120" id="UNd-iD-WV9"/>
+                            <constraint firstItem="rL4-xD-jMk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="mmF-1X-04L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="134"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="ePP-HA-3Nd">
+            <objects>
+                <viewController storyboardIdentifier="questionData" id="xl5-Dv-hrB" customClass="QuestionViewController" customModule="ITQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="question" id="46G-Vm-18N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYw-BK-oGf">
+                                <rect key="frame" x="5.0000000000000018" y="100" width="23.666666666666671" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ITとは何の略でしょう？" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ag8-NW-p10">
+                                <rect key="frame" x="0.0" y="144" width="375" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ODL-HH-HTM">
+                                <rect key="frame" x="35" y="230" width="300" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-58-lfv" userLabel="Answer1 Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="PCやスマートフォンなどの従来型の通信機器を除いた、ありとあらゆる「モノ」がインターネットとつながる仕組みや技術のこと">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapAnswer1Button:" destination="xl5-Dv-hrB" eventType="touchUpInside" id="gdP-fg-jSX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iZg-wB-jzz" userLabel="Answer2 Button">
+                                        <rect key="frame" x="0.0" y="90" width="300" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="情報通信技術。コンピュータ技術の活用面に着目し、省庁が絡む大型プロジェクトなどで使われる">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapAnswer2Button:" destination="xl5-Dv-hrB" eventType="touchUpInside" id="dF7-Ck-fhL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Pqk-vI-WBr" userLabel="Answer3 Button">
+                                        <rect key="frame" x="0.0" y="180" width="300" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="情報技術。コンピューター・インターネット・携帯電話などを使う、情報処理や通信に関する技術を総合的に指していう語">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapAnswer3Button:" destination="xl5-Dv-hrB" eventType="touchUpInside" id="Puc-fJ-i0D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0Sv-gp-oSn">
+                                        <rect key="frame" x="0.0" y="270" width="300" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="人間の弱さに付け込む不気味なピエロに翻弄される人々を描くホラー作品">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapAnswer4Button:" destination="xl5-Dv-hrB" eventType="touchUpInside" id="BG0-Br-Jy3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="6WN-fc-SWd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="M1P-Hh-ZEC"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="LnO-Cx-gIn">
+                                <rect key="frame" x="151" y="312" width="112" height="112"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="oQs-ma-LRI">
+                                <rect key="frame" x="155.66666666666666" y="303" width="102.99999999999997" height="130"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ODL-HH-HTM" firstAttribute="leading" secondItem="Ebq-e1-rbH" secondAttribute="leading" constant="35" id="6eh-mZ-Fnc"/>
+                            <constraint firstItem="oQs-ma-LRI" firstAttribute="centerX" secondItem="46G-Vm-18N" secondAttribute="centerX" id="akr-xq-ArN"/>
+                            <constraint firstItem="oQs-ma-LRI" firstAttribute="centerY" secondItem="46G-Vm-18N" secondAttribute="centerY" id="fd2-2F-Gjo"/>
+                            <constraint firstItem="LnO-Cx-gIn" firstAttribute="centerX" secondItem="46G-Vm-18N" secondAttribute="centerX" id="gyF-YQ-Mtc"/>
+                            <constraint firstItem="LnO-Cx-gIn" firstAttribute="centerY" secondItem="46G-Vm-18N" secondAttribute="centerY" id="ijg-T7-3KP"/>
+                            <constraint firstItem="rYw-BK-oGf" firstAttribute="leading" secondItem="Ebq-e1-rbH" secondAttribute="leading" constant="5" id="jQ9-lB-tK6"/>
+                            <constraint firstItem="rYw-BK-oGf" firstAttribute="leading" secondItem="Ebq-e1-rbH" secondAttribute="leading" constant="5" id="lpP-cr-DWa"/>
+                            <constraint firstItem="rYw-BK-oGf" firstAttribute="leading" secondItem="Ebq-e1-rbH" secondAttribute="leading" constant="5" id="mvE-c9-Bc3"/>
+                            <constraint firstItem="rYw-BK-oGf" firstAttribute="top" secondItem="Ebq-e1-rbH" secondAttribute="top" constant="80" id="v7U-Jy-CZ9"/>
+                            <constraint firstItem="ODL-HH-HTM" firstAttribute="top" secondItem="Ebq-e1-rbH" secondAttribute="top" constant="210" id="zmv-hb-eho"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ebq-e1-rbH"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer1Button" destination="IbV-58-lfv" id="9lm-AE-7FT"/>
+                        <outlet property="answer2Button" destination="iZg-wB-jzz" id="JOs-Vv-ePQ"/>
+                        <outlet property="answer3Button" destination="Pqk-vI-WBr" id="AtV-6Y-Pjb"/>
+                        <outlet property="answer4Button" destination="0Sv-gp-oSn" id="iba-oC-5DY"/>
+                        <outlet property="correctImageView" destination="oQs-ma-LRI" id="CaJ-bW-pmU"/>
+                        <outlet property="incorrectImageView" destination="oQs-ma-LRI" id="RCb-ys-xwP"/>
+                        <outlet property="questionNoLabel" destination="rYw-BK-oGf" id="E1y-4N-f27"/>
+                        <outlet property="questionTextView" destination="ag8-NW-p10" id="hF9-AK-Pz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fa9-xL-vcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="132.88043478260872"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Svy-UJ-kod">
+            <objects>
+                <viewController storyboardIdentifier="result" title="Result View Controller" id="bfx-Mh-HWy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="result" id="2zA-OR-AlG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJC-Ma-OBV">
+                                <rect key="frame" x="105" y="478" width="178" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="タイトルへ戻る">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dHF-MJ-5sQ" kind="unwind" unwindAction="goToTittle:" id="Nrb-wg-Reo"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2im-Gs-ggI">
+                                <rect key="frame" x="80" y="110" width="161" height="204"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解率は" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07z-uA-y1d">
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="48"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-lU-iit">
+                                        <rect key="frame" x="0.0" y="78" width="161" height="48"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="でした" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-tO-Stj">
+                                        <rect key="frame" x="0.0" y="156" width="161" height="48"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2im-Gs-ggI" firstAttribute="leading" secondItem="TSy-uL-jag" secondAttribute="leading" constant="80" id="FZz-SD-xUx"/>
+                            <constraint firstItem="2im-Gs-ggI" firstAttribute="top" secondItem="TSy-uL-jag" secondAttribute="top" constant="90" id="gab-go-dRz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TSy-uL-jag"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WzX-EY-QGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dHF-MJ-5sQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="1002"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="correct" width="112" height="112"/>
+        <image name="incorrect" width="103" height="130"/>
+    </resources>
+</document>
