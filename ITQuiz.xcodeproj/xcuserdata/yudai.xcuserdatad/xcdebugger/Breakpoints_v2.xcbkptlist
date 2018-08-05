@@ -10,107 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ITQuiz/QuestionViewController.swift"
-            timestampString = "553833292.629091"
+            timestampString = "555159701.814799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ITQuiz/QuestionViewController.swift"
-            timestampString = "553833602.604641"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "QuestionViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ITQuiz.QuestionViewController.questionData.getter : Swift.Optional&lt;ITQuiz.QuestionData&gt;"
-                  moduleName = "ITQuiz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yudai/ITQuiz/ITQuiz/ITQuiz/QuestionViewController.swift"
-                  timestampString = "553833602.610571"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "109">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ITQuiz.QuestionViewController.questionData.setter : Swift.Optional&lt;ITQuiz.QuestionData&gt;"
-                  moduleName = "ITQuiz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yudai/ITQuiz/ITQuiz/ITQuiz/QuestionViewController.swift"
-                  timestampString = "553833602.612675"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ITQuiz.QuestionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ITQuiz.QuestionViewController"
-                  moduleName = "ITQuiz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yudai/ITQuiz/ITQuiz/ITQuiz/QuestionViewController.swift"
-                  timestampString = "553833602.614827"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "85">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ITQuiz.QuestionViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;ITQuiz.QuestionViewController&gt;"
-                  moduleName = "ITQuiz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yudai/ITQuiz/ITQuiz/ITQuiz/QuestionViewController.swift"
-                  timestampString = "553833602.617483"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "55">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ITQuiz/QuestionViewController.swift"
-            timestampString = "553833645.15311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "152"
+            endingLineNumber = "152">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
