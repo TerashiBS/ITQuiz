@@ -9,10 +9,25 @@
 import UIKit
 import AudioToolbox
 
-class QuestionViewController:UIViewController{
+class QuestionViewController:UIViewController {
     
+    
+     func csvToArray () {
+        if let csvPath = Bundle.main.path(forResource: "question", ofType: "csv") {
+            do {
+                let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                let csvArr = csvStr.components(separatedBy: .newlines)
+                print(csvArr)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
    
-    var questionData: QuestionData!
+    
+    
+    var questionData:QuestionData
+    
     
     @IBOutlet weak var questionNoLabel: UILabel!
         //問題番号ラベル
@@ -37,6 +52,8 @@ class QuestionViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        csvToArray()
+        
         let test = QuestionDataManager.sharedInstance
         
         test.loadQuestion()
@@ -45,6 +62,10 @@ class QuestionViewController:UIViewController{
         guard let questionData = test.nextQuestion() else{
             return
         }
+        
+        
+        print(questionData.question)
+        
         //初期データ設定処理。前画面で設定済みのquestionDataから値を取り出す
         questionNoLabel.text = "Q.\(questionData.questionNo)"
         questionTextView.text = questionData.question
@@ -57,6 +78,7 @@ class QuestionViewController:UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     //選択肢1をタップ
     @IBAction func tapAnswer1Button(_ sender:Any){

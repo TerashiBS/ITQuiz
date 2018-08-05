@@ -12,28 +12,28 @@ import Foundation
 class QuestionData{
     
     //問題文
-    var question:String?
+    var question:String
     
     //選択肢1
-    var answer1:String?
+    var answer1:String
     
     //選択肢2
-    var answer2:String?
+    var answer2:String
     
     //選択肢3
-    var answer3:String?
+    var answer3:String
     
     //選択肢4
-    var answer4:String?
+    var answer4:String
     
     //正解の番号
-    var correctAnswerNumber:Int
+    var correctAnswerNumber: Int
     
     //ユーザーが選択した選択番号
-    var userChoiceAnswerNumber:Int?
+    var userChoiceAnswerNumber: Int = 0
     
     //問題の番号
-    var questionNo:Int=0
+    var questionNo: Int=0
     
     //クラスが生成された時の処理
     init(questionSourceDataArray:[String]){
@@ -69,7 +69,7 @@ class QuestionDataManager{
     var questionDataArray = [QuestionData]()
     
     //現在問題のインデクッス
-    var nowQuestionIndex: Int = 0
+    var nowQuestionIndex = 0
     
     //初期化処理
     private init(){
